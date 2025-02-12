@@ -1,0 +1,23 @@
+Package: CellMaNam
+Type: Package
+Title: Toolkit for naming cells based on curated cell markers
+Version: 0.1.0
+Authors@R: c(
+    person(given = "", 
+           family = "Jakub Kubiś - JBioSystem", 
+           role = c("aut", "cre"), 
+           comment = "Laboratory of Single Cell Analyses, Institute of Bioorganic Chemistry, PAS")
+    )
+Author: Jakub Kubiś - JBioSystem; Laboratory of Single Cell Analyses, Institute of Bioorganic Chemistry, PAS
+Maintainer: JBioSystem <jbiosystem@gmail.com>
+Description: A computational tool for naming cell clusters using statistical methods, including Fisher’s exact test and occurrence-based filtering. CellMaNam identifies marker genes and annotates cell types in single-cell RNA sequencing (scRNA-seq) data by analyzing gene occurrence patterns. It systematically determines optimal markers, refines annotations based on hierarchical relationships, and visualizes results through heatmaps, enabling precise and statistically robust cell classification.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Imports:
+    openxlsx,
+    dplyr,
+    ggplot2,
+    pheatmap,
+    reshape2

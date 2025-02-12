@@ -1,0 +1,15 @@
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/reference/calc_occurrence.html</loc></url>
+<url><loc>/reference/cell_typing.html</loc></url>
+<url><loc>/reference/find_markers_rna_seq.html</loc></url>
+<url><loc>/reference/get_annotation.html</loc></url>
+<url><loc>/reference/heat_map_names.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/load_markers_data.html</loc></url>
+<url><loc>/reference/load_markers_hierarchy.html</loc></url>
+<url><loc>/reference/select_top_occ.html</loc></url>
+</urlset>
+
