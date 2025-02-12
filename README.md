@@ -150,7 +150,7 @@ cell_types_top5 <- cell_types %>%
 ```
 
 <p align="center">
-<img  src="fig/5.bmp" alt="drawing" width="800" />
+<img  src="fig/5.bmp" alt="drawing" width="650" />
 </p>
 </div>
 
@@ -166,7 +166,7 @@ heat_map_names(cell_types_data = cell_types_top5, value = 'completed')
 ```
 
 <p align="center">
-<img  src="fig/6.bmp" alt="drawing" width="800" />
+<img  src="fig/6.bmp" alt="drawing" width="650" />
 </p>
 </div>
 
