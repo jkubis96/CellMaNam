@@ -9,6 +9,7 @@ NULL
 #'
 #' @param data_path Path to the input file (CSV, TSV, TXT, or XLSX)
 #' @return A dataframe containing the marker data
+#' @export
 load_markers_data <- function(data_path) {
 
 
@@ -35,6 +36,7 @@ load_markers_data <- function(data_path) {
 #'
 #' @param data_path Path to the input file (CSV, TSV, TXT, or XLSX)
 #' @return A dataframe containing the marker hierarchy
+#' @export
 load_markers_hierarchy <- function(data_path) {
 
 
@@ -62,6 +64,7 @@ load_markers_hierarchy <- function(data_path) {
 #' @param features_col Name of the column containing features
 #' @param cell_column Name of the column containing cell annotations
 #' @return Dataframe with feature occurrence counts
+#' @export
 calc_occurrence <- function(markers_data, features_col = NULL, cell_column = NULL) {
 
   if (!is.null(features_col) && !(features_col %in% colnames(markers_data))) {
@@ -101,6 +104,7 @@ calc_occurrence <- function(markers_data, features_col = NULL, cell_column = NUL
 #' @param markers_occ Dataframe containing feature occurrences
 #' @param top_n Number of thresholds for selecting the top features
 #' @return Filtered dataframe with top occurring features
+#' @export
 select_top_occ <- function(markers_occ, top_n = 2) {
 
   final_df <- data.frame()
@@ -136,6 +140,7 @@ select_top_occ <- function(markers_occ, top_n = 2) {
 #' @param include_markers List of markers to include. Recommended all markers inside in cell markers data used for naming.
 #' @param stat Statistical method for filtering ('mean', 'median', 'q1', 'q3'). Default: 'mean'
 #' @return Dataframe of identified markers
+#' @export
 find_markers_rna_seq <- function(rna_seq_df, exclude_genes = NULL, exclude_mt = TRUE, include_markers = NULL, stat = 'mean') {
 
   if (is.atomic(exclude_genes)) {
@@ -210,6 +215,7 @@ find_markers_rna_seq <- function(rna_seq_df, exclude_genes = NULL, exclude_mt = 
 #' @param max_genes Integer, the maximum number of genes to consider
 #' @return A dataframe with cell annotations, associated cell types, p-values, and gene percentages
 #' @details Uses Fisher's exact test to assess marker significance.
+#' @export
 get_annotation <- function(cell_markers, markers_occ, max_genes) {
 
 
@@ -289,6 +295,7 @@ get_annotation <- function(cell_markers, markers_occ, max_genes) {
 #' @param hierarchy Boolean, whether to use hierarchical annotation. If you want to use hierarchical data for name creating. If not the names will based on 'level'. Default: TRUE
 #' @return A dataframe with assigned cell types, weighted p-values, and log-transformed p-values
 #' @details Uses hierarchical relationships and statistical thresholds to classify cell types.
+#' @export
 cell_typing <- function(annotation_data, hierarchy_data, p_val = 0.01, level = 1, hierarchy = TRUE) {
 
   input_annotations <- annotation_data$cell_annotation
@@ -464,6 +471,7 @@ cell_typing <- function(annotation_data, hierarchy_data, p_val = 0.01, level = 1
 #' @param cell_types_data Dataframe containing cell type data (cell_typing())
 #' @param value Column name used for heatmap values. Default: 'completed'
 #' @return A heatmap object displaying the relationship between full names and annotations
+#' @export
 heat_map_names <- function(cell_types_data, value = 'completed') {
 
 
