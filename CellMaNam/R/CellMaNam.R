@@ -332,8 +332,9 @@ cell_typing <- function(annotation_data, hierarchy_data, p_val = 0.01, level = 1
                                                    full_names = c('Undefined'),
                                                    weighted_p_val = c(-1),
                                                    weighted_pct = c(0),
-                                                   log2_p_val = c(0)),
-                             completed = c(0))
+                                                   log2_p_val = c(0),
+                                                   completed = c(0))
+          )
 
         }
       }
@@ -423,8 +424,9 @@ cell_typing <- function(annotation_data, hierarchy_data, p_val = 0.01, level = 1
                                                  full_names = c('Undefined'),
                                                  weighted_p_val = c(-1),
                                                  weighted_pct = c(0),
-                                                 log2_p_val = c(0)),
-                           completed = c(0))
+                                                 log2_p_val = c(0),
+                                                 completed = c(0))
+        )
 
       }
     }
@@ -450,8 +452,9 @@ cell_typing <- function(annotation_data, hierarchy_data, p_val = 0.01, level = 1
                                                  full_names = c('Undefined'),
                                                  weighted_p_val = c(-1),
                                                  weighted_pct = c(0),
-                                                 log2_p_val = c(0)),
-                           completed = c(0))
+                                                 log2_p_val = c(0),
+                                                 completed = c(0))
+        )
 
       }
     }
@@ -463,6 +466,7 @@ cell_typing <- function(annotation_data, hierarchy_data, p_val = 0.01, level = 1
 
 
 }
+
 
 
 
