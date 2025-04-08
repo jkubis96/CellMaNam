@@ -301,6 +301,10 @@ cell_typing <- function(annotation_data, hierarchy_data, p_val = 0.01, level = 1
   input_annotations <- annotation_data$cell_annotation
 
   annotation_data <- annotation_data[annotation_data$p_val <= p_val,]
+  annotation_data <- annotation_data[annotation_data$p_val < 1,]
+  annotation_data <- annotation_data[annotation_data$genes_perc > 0,]
+
+
 
   annotation_data$p_val[annotation_data$p_val == 0] = min(annotation_data$p_val)*0.9
 
@@ -330,10 +334,10 @@ cell_typing <- function(annotation_data, hierarchy_data, p_val = 0.01, level = 1
         if (!miss %in% full_data$annotation) {
           full_data <- rbind(full_data, data.frame(annotation = c(miss),
                                                    full_names = c('Undefined'),
-                                                   weighted_p_val = c(-1),
-                                                   weighted_pct = c(0),
-                                                   log2_p_val = c(0),
-                                                   completed = c(0))
+                                                   weighted_p_val = c(1),
+                                                   weighted_pct = c(1),
+                                                   log2_p_val = c(1),
+                                                   completed = c(1))
           )
 
         }
@@ -422,10 +426,10 @@ cell_typing <- function(annotation_data, hierarchy_data, p_val = 0.01, level = 1
       if (!miss %in% full_data$annotation) {
         full_data <- rbind(full_data, data.frame(annotation = c(miss),
                                                  full_names = c('Undefined'),
-                                                 weighted_p_val = c(-1),
-                                                 weighted_pct = c(0),
-                                                 log2_p_val = c(0),
-                                                 completed = c(0))
+                                                 weighted_p_val = c(1),
+                                                 weighted_pct = c(1),
+                                                 log2_p_val = c(1),
+                                                 completed = c(1))
         )
 
       }
@@ -450,10 +454,10 @@ cell_typing <- function(annotation_data, hierarchy_data, p_val = 0.01, level = 1
       if (!miss %in% full_data$annotation) {
         full_data <- rbind(full_data, data.frame(annotation = c(miss),
                                                  full_names = c('Undefined'),
-                                                 weighted_p_val = c(-1),
-                                                 weighted_pct = c(0),
-                                                 log2_p_val = c(0),
-                                                 completed = c(0))
+                                                 weighted_p_val = c(1),
+                                                 weighted_pct = c(1),
+                                                 log2_p_val = c(1),
+                                                 completed = c(1))
         )
 
       }
